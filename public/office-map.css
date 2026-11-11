@@ -1,0 +1,62 @@
+/* Quiet cartography, using the existing cream, charcoal and rust palette. */
+body[data-route="about"] .story-panel{background:#c5d6db;color:var(--ink);padding:0}
+body[data-route="about"] .story-panel>.brand{position:absolute;top:30px;left:32px;z-index:3}
+body[data-route="about"] .brand img{filter:brightness(0)}
+body[data-route="about"] .story{position:absolute;inset:0;overflow:hidden}
+.office-location{height:100%;width:100%;position:relative;isolation:isolate;background:#c5d6db;color:var(--ink);overflow:hidden}
+.office-map-canvas{position:absolute;inset:0;z-index:0}
+.office-map-heading{position:absolute;left:32px;right:32px;top:102px;z-index:2;pointer-events:none}
+.office-map-heading .eyebrow{font-size:9px;color:#52645f;letter-spacing:.14em}
+.office-map-heading h1{font-size:clamp(24px,2.55vw,41px);font-weight:400;line-height:1.45;letter-spacing:-.045em;margin-top:13px;text-shadow:0 1px 12px #dfe7e6}
+.office-journey{display:flex;align-items:center;gap:9px;margin-top:8px;width:max-content;pointer-events:auto}
+.office-journey button{padding:12px 0;font-size:11px;min-height:44px;color:#687670;transition:color .4s}
+.office-journey i{font-style:normal;font-size:10px;color:#899792}
+.office-journey button[aria-current=true]{color:#8b452f}
+.office-map-tools{position:absolute;z-index:3;right:20px;top:50%;display:flex;flex-direction:column;transform:translateY(-60%);background:rgb(245 243 238/.94);border:1px solid #a7b2ab;border-radius:2px;overflow:hidden}
+.office-map-tools button{width:42px;height:42px;font-size:20px;border-bottom:1px solid #cbd0c7;transition:background .25s}
+.office-map-tools button:last-child{border:0;font-size:12px}
+.office-map-tools button:hover{background:#dce0d6}
+.office-location button:disabled{opacity:.35;cursor:default}
+.office-map-notice{position:absolute;left:32px;bottom:226px;z-index:2;display:flex;gap:10px;align-items:center;font-size:10px;color:#394d45;background:rgb(245 243 238/.85);padding:7px 10px;max-width:calc(100% - 64px)}
+.office-map-notice button{text-decoration:underline;text-underline-offset:3px;padding:5px;white-space:nowrap}
+.office-address{position:absolute;z-index:2;bottom:49px;left:28px;right:28px;padding:16px 19px 0;background:rgb(245 243 238/.97);border:1px solid #cad0c6;box-shadow:0 6px 28px #243b3a0c}
+.office-address-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:8px;letter-spacing:.12em;color:#68766e}
+.office-address-meta button{font-size:10px;min-height:26px;padding:0;letter-spacing:0}
+.office-address h2{font-size:26px;line-height:1.3;font-weight:400;letter-spacing:-.04em;margin:4px 0 6px}
+.office-address h2 span{font-size:19px;margin-left:8px}
+.office-address h2{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:8px}
+.office-address h2 span{margin-left:0;white-space:nowrap}
+.office-switch{display:flex;gap:22px;border-bottom:1px solid #d2d6cd;margin:-9px 0 8px}
+.office-switch button{min-height:40px;padding:0 0 2px;color:#778075;font-size:12px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.office-switch button[aria-pressed=true]{color:#8b452f;border-bottom-color:#8b452f}
+.office-map-notice{bottom:277px}
+.office-address p{font-size:11px;color:#69756c}
+.office-coordinates{display:flex;gap:12px;margin:9px 0 12px;font-size:9px;letter-spacing:.04em;color:#7e8980;font-variant-numeric:tabular-nums}
+.office-coordinates small{font-size:8px;margin-left:auto}
+.office-address-actions{display:flex;border-top:1px solid #d2d6cd;gap:20px}
+.office-address-actions a,.office-address-actions button{display:flex;gap:10px;justify-content:space-between;align-items:center;flex:1;min-height:42px;padding:0;font-size:11px}
+.office-address-actions a{color:#8b452f}
+.office-address-actions span{font-size:17px;font-weight:400}
+.office-map-help{position:absolute;z-index:2;left:30px;right:20px;bottom:13px;font-size:8px;line-height:1.8;color:#54645b;pointer-events:none}
+.office-map-help small{display:block;font-size:7px;opacity:.8}
+.map-mobile-help{display:none}
+.office-pin{background:#303b33;color:#f5f3ee;padding:9px 12px 12px;text-align:left;box-shadow:0 4px 22px #2030272b;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .5s;border:1px solid #f5f3ee80}
+.office-pin.is-visible{visibility:visible;opacity:1;pointer-events:auto}
+.office-pin span{display:block;font-size:8px;letter-spacing:.13em;color:#c9d0c4;margin-bottom:4px}
+.office-pin strong{font-size:11px;font-weight:400;white-space:nowrap}
+.office-pin i{position:absolute;left:50%;bottom:-7px;width:12px;height:12px;transform:translateX(-50%) rotate(45deg);background:#303b33}
+.office-map-canvas .maplibregl-ctrl-bottom-left{left:auto;right:5px;bottom:5px;z-index:4}
+.office-map-canvas .maplibregl-ctrl-attrib{background:#f5f3eecf;color:#657466;font-family:inherit;font-size:8px;line-height:18px;min-height:18px}
+.office-map-canvas .maplibregl-ctrl-attrib.maplibregl-compact{min-width:18px;padding:0 20px 0 5px;border-radius:3px}
+.office-map-canvas .maplibregl-ctrl-attrib-button{width:18px;height:18px;background-size:16px}
+.office-map-canvas .maplibregl-canvas:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.map-unavailable .office-map-canvas{opacity:.2}
+.map-unavailable .office-map-notice{background:var(--paper);line-height:1.7}
+body[data-route="about"] .about-mobile-tree{padding:0;background:#c5d6db}
+.about-mobile-tree .office-location{height:640px}
+@media(min-width:1700px){.office-map-heading{top:120px;left:44px}.office-map-heading .eyebrow{font-size:11px}.office-journey button{font-size:13px}.office-address{left:40px;right:40px;bottom:61px;padding:22px 24px 0}.office-address h2{font-size:34px}.office-address h2 span{font-size:24px}.office-address p,.office-address-actions a,.office-address-actions button{font-size:13px}.office-address-meta{font-size:10px}.office-coordinates{font-size:11px;margin-top:13px;margin-bottom:17px}.office-address-actions a,.office-address-actions button{min-height:48px}.office-map-notice{left:44px;bottom:285px;font-size:12px}.office-map-help{left:42px;bottom:20px;font-size:10px}.office-map-help small{font-size:9px}.office-map-tools button{width:46px;height:46px}.office-pin strong{font-size:13px}.office-pin span{font-size:10px}}
+@media(min-width:761px) and (max-height:650px){.office-map-heading{top:78px}.office-map-heading h1{font-size:23px;line-height:1.3}.office-map-heading .eyebrow{display:none}.office-address{bottom:43px;padding-top:10px}.office-address h2{font-size:23px}.office-coordinates{margin:7px 0}.office-map-notice{bottom:205px}.office-map-help{bottom:8px}.office-map-tools{right:12px}}
+@media(max-width:760px){.about-mobile-tree{margin-top:38px}.office-map-heading{top:25px;left:24px;right:24px}.office-map-heading h1{font-size:28px}.office-map-heading .eyebrow{font-size:9px}.office-map-tools{right:15px;top:47%}.office-map-tools button{width:44px;height:44px}.office-address{left:18px;right:18px;bottom:58px;padding:13px 16px 0}.office-address h2{font-size:27px}.office-address p{font-size:11px}.office-address-actions a,.office-address-actions button{min-height:44px;font-size:12px}.office-map-notice{left:22px;bottom:241px;font-size:10px}.office-address-meta button{min-height:34px}.office-map-help{left:20px;bottom:17px;font-size:9px}.map-desktop-help{display:none}.map-mobile-help{display:inline}.office-map-help small{font-size:8px}.office-journey{gap:12px}.office-journey button{font-size:12px}.office-pin{padding:8px 11px 10px}.office-coordinates{font-size:9px}}
+@media(min-width:1700px){.office-map-notice{bottom:335px}}
+@media(min-width:761px) and (max-height:650px){.office-map-notice{bottom:255px}}
+@media(max-width:760px){.office-map-notice{bottom:296px}.office-address h2{font-size:24px}.office-address h2 span{font-size:16px}.office-switch button{min-height:44px}.office-coordinates{gap:8px}.office-address p{line-height:1.6}}

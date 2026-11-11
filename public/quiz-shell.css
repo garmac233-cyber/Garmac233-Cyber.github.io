@@ -1,0 +1,12 @@
+/* The quiz keeps its approved question and result components. */
+html{scroll-behavior:smooth}body,body.home-page,body.clean-result-page{margin:8px;border-radius:var(--wujie-radius);background:var(--paper);min-height:calc(100dvh - 16px)}
+.wrap{max-width:1360px;padding-inline:clamp(20px,3.6vw,52px)}
+.wrap>header{min-height:72px;padding:15px 0;gap:24px}
+.wrap>header .brand-home .wujie-brand-mark{display:none}.wrap>header .brand-home strong{font-size:17px;letter-spacing:.04em}.wrap>header .brand-home small{font-size:10px}
+.wrap>header .links{gap:22px}.wrap>header .link{font-size:12px}
+.home-intro{padding-top:32px}.home-intro h1{max-width:800px}
+.quiz-site-return{margin-top:32px;padding:22px 0;border-top:1px solid var(--line);display:flex;align-items:center;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:13px}.quiz-site-return a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding:8px 0;min-height:40px}
+@media(max-width:600px){body,body.home-page,body.clean-result-page{margin:0;border-radius:0;min-height:100dvh}.wrap{padding-inline:20px}.wrap>header{padding:14px 0;min-height:84px;gap:12px}.wrap>header .links{gap:18px}.wrap>header .link{font-size:12px}.home-intro h1{font-size:32px}.quiz-site-return{gap:16px}}
+@media print{.wujie-site-nav,.quiz-site-return{display:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.wujie-site-brand img{filter:brightness(0);opacity:.9}

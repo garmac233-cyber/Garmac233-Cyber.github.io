@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="无界 WUJIE，围绕人与生活的空间设计。浏览居住空间、样板间与公共空间方案，了解从需求沟通到设计落地的服务流程。">
+  <meta property="og:title" content="无界 WUJIE｜让空间呼吸，让景观无界">
+  <meta property="og:description" content="空间作品、设计方法与服务流程。先去感受，先去生活，然后才是设计。">
+  <title>无界 WUJIE｜空间作品与服务</title>
+  <link rel="icon" type="image/png" href="assets/wujie-mark.png">
+  <link rel="stylesheet" href="design-system.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="home.css?v=10">
+  <link rel="stylesheet" href="process.css?v=10">
+  <link rel="stylesheet" href="about.css?v=10">
+  <link rel="stylesheet" href="vendor/maplibre-gl.css?v=5.14">
+  <link rel="stylesheet" href="office-map.css?v=10">
+  <link rel="stylesheet" href="unified.css?v=10">
+  <script src="content.js?v=10" defer></script>
+  <script src="project-photos.js?v=10" defer></script>
+  <script src="home-motion.js?v=10" defer></script>
+  <script src="process.js?v=10" defer></script>
+  <script src="vendor/maplibre-gl.js?v=5.14" defer></script>
+  <script src="map-style.js?v=10" defer></script>
+  <script src="office-map.js?v=10" defer></script>
+  <script src="about.js?v=10" defer></script>
+  <script src="app.js?v=10" defer></script>
+  <script src="intro.js?v=10" defer></script>
+</head>
+<body>
+  <div id="opening" class="opening" aria-label="无界开场" role="status">
+    <canvas id="opening-curtain" aria-hidden="true"></canvas>
+    <div class="opening-identity">
+      <div class="opening-left"><span><i>空间</i></span><strong><i>无界</i></strong></div>
+      <img class="opening-mark" src="assets/wujie-mark.png" alt="无界标志" width="112" height="101">
+      <div class="opening-right"><span><i>作品集</i></span><strong><i>WUJIE</i></strong></div>
+    </div>
+    <button id="skip-opening" type="button">进入网站 ↗</button>
+  </div>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="site-shell">
+    <aside class="story-panel" aria-label="无界与项目介绍">
+      <a class="brand" href="#work" aria-label="无界，返回作品首页">
+        <img src="assets/wujie-mark.png" alt="" width="38" height="35">
+        <span>无界 <b>WUJIE</b></span>
+      </a>
+      <div id="story" class="story"></div>
+      <footer class="side-footer"><span>空间设计 · 全案落地</span><span class="edition">WUJIE STUDIO</span></footer>
+    </aside>
+    <section class="visual-panel">
+      <header class="topbar">
+        <a class="mobile-brand" href="#work" aria-label="无界首页">无界 <span>WUJIE</span></a>
+        <nav aria-label="主要导航">
+          <a href="#work" data-nav="work">作品<span>WORK</span></a>
+          <a href="#process" data-nav="process">服务<span>PROCESS</span></a>
+          <a href="#about" data-nav="about">关于<span>ABOUT</span></a>
+          <a href="quiz.html">问答<span>QUIZ</span></a>
+        </nav>
+        <button class="contact-trigger" data-inquiry>聊聊你的空间 <span aria-hidden="true">↗</span></button>
+      </header>
+      <main id="main-content" class="viewport" tabindex="-1"></main>
+      <div class="scroll-track" aria-hidden="true"><div id="scroll-progress"></div></div>
+    </section>
+  </div>
+  <div class="mobile-detail-tools" hidden><button id="brief-toggle" aria-expanded="false" aria-controls="story">项目 Brief <span>＋</span></button><a href="#work" aria-label="关闭项目，返回作品">关闭 ×</a></div>
+  <dialog id="inquiry-dialog" aria-labelledby="inquiry-title">
+    <div class="dialog-head"><span class="eyebrow">START A CONVERSATION</span><button class="icon-button" id="close-inquiry" aria-label="关闭合作需求">×</button></div>
+    <h2 id="inquiry-title">从你的空间说起。</h2>
+    <p>把最关心的事写下来，作为我们第一次对话的起点。</p>
+    <a class="quiz-entry" href="quiz.html">还没想清楚？先做居住问答 <span aria-hidden="true">↗</span></a>
+    <form id="inquiry-form">
+      <div class="form-grid"><label>项目城市<input name="city" autocomplete="address-level2" placeholder="例如：深圳" maxlength="60"></label><label>大致面积<input name="area" inputmode="decimal" placeholder="例如：120 ㎡" maxlength="30"></label></div>
+      <label>希望获得的服务<select name="service"><option>全屋设计把控</option><option>局改设计与预算控制</option><option>柜体收纳与设计</option><option>软装搭配</option><option>还想先聊聊</option></select></label>
+      <label>你对空间的期待<textarea name="needs" rows="4" maxlength="3000" placeholder="谁会使用这个空间？现在最想改善什么？"></textarea></label>
+      <p class="form-note">这份需求单仅保存在你的设备上，不会自动发送。</p>
+      <button class="solid-button" type="submit">下载合作需求单 <span aria-hidden="true">↓</span></button>
+      <p id="form-status" role="status"></p>
+    </form>
+  </dialog>
+  <noscript><style>.opening{display:none}</style><div class="noscript">请启用 JavaScript 浏览无界的项目图片与服务介绍。</div></noscript>
+</body>
+</html>

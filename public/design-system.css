@@ -1,0 +1,15 @@
+/* Shared WUJIE vocabulary: portfolio, services, team and residential quiz. */
+:root{--paper:#f5f3ee;--ink:#26251f;--muted:#7a786e;--line:#d8d5cb;--accent:#a85135;--wujie-ground:#dad8d1;--wujie-radius:8px;--wujie-nav-height:76px;--wujie-ease:cubic-bezier(.22,1,.36,1)}
+button,input,select,textarea{font:inherit}
+a,button{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.quiz-entry{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;text-decoration:none;border-bottom:1px solid var(--line);padding:12px 0;color:var(--accent);font-size:14px;min-height:44px;transition:color .25s,border-color .25s}
+.quiz-entry:hover{color:var(--ink);border-color:currentColor}
+.wujie-site-nav{min-height:var(--wujie-nav-height);display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding:0 clamp(20px,3.6vw,52px);font-size:14px}
+.wujie-site-nav a{color:var(--muted);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;position:relative}
+.wujie-site-nav>div{display:flex;gap:28px}.wujie-site-nav a:hover,.wujie-site-nav [aria-current=page]{color:var(--ink)}
+.wujie-site-nav [aria-current=page]:after{content:'';position:absolute;bottom:4px;left:0;right:0;height:2px;background:var(--accent)}
+.wujie-site-nav .wujie-site-brand{color:var(--ink);gap:12px;font-size:23px;letter-spacing:.1em}
+.wujie-site-brand img{object-fit:contain}.wujie-site-brand span{font-size:12px;letter-spacing:.16em;margin-left:4px}
+@media(max-width:600px){:root{--wujie-nav-height:72px}.wujie-site-nav{padding:0 18px;gap:12px}.wujie-site-nav>div{gap:20px}.wujie-site-brand span{display:none}.wujie-site-nav .wujie-site-brand{font-size:20px;gap:8px}.wujie-site-brand img{width:26px;height:26px}}
+@media(prefers-reduced-motion:reduce){.quiz-entry{transition:none}}
